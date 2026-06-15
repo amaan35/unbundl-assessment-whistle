@@ -8,7 +8,7 @@ function ChevronIcon({ up }) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      className={`h-4 w-4 transition-transform ${up ? '' : 'rotate-180'}`}
+      className={`h-4 w-4 transition-transform ${up ? 'rotate-180' : ''}`}
       aria-hidden="true"
     >
       <path
@@ -117,99 +117,99 @@ function ClinicLocator() {
   return (
     <div className="bg-[#F0F7FF] px-4 py-6 md:px-10 md:py-8">
       <div className="mx-auto max-w-6xl md:rounded-[32px] md:bg-[#F0F7FF]">
-      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-        <h2 className="text-base font-bold leading-snug text-gray-900 md:max-w-xl md:text-xl lg:text-2xl">
-          <span className="hidden md:inline">
-            Book a Free 3D Teeth Scan and Orthodontist Consult in a Clove
-            Dental Clinic near you.
-          </span>
-          <span className="md:hidden">
-            Book Free Orthodontist Consult at a Clove Dental Clinic. 450+
-            Clinics near you
-          </span>
-        </h2>
+        <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+          <h2 className="text-base font-bold leading-snug text-gray-900 md:max-w-xl md:text-xl lg:text-2xl">
+            <span className="hidden md:inline">
+              Book a Free 3D Teeth Scan and Orthodontist Consult in a Clove
+              Dental Clinic near you.
+            </span>
+            <span className="md:hidden">
+              Book Free Orthodontist Consult at a Clove Dental Clinic. 450+
+              Clinics near you
+            </span>
+          </h2>
 
-        <div className="flex items-center justify-between md:flex-col md:items-end">
-          <img
-            src={cloveLogo}
-            alt="Clove Dental"
-            className="h-10 w-auto md:h-12"
-          />
-          <button
-            type="button"
-            onClick={() => setExpanded(!expanded)}
-            className="flex items-center gap-1 text-sm font-medium text-[#9361D7] md:mt-3"
-            aria-expanded={expanded}
-          >
-            Find Clinic
-            <ChevronIcon up={expanded} />
-          </button>
+          <div className="flex items-center justify-between md:flex-col md:items-end">
+            <img
+              src={cloveLogo}
+              alt="Clove Dental"
+              className="h-10 w-auto md:h-12"
+            />
+            <button
+              type="button"
+              onClick={() => setExpanded(!expanded)}
+              className="flex items-center gap-1 text-sm font-medium text-[#9361D7] md:mt-3"
+              aria-expanded={expanded}
+            >
+              Find Clinic
+              <ChevronIcon up={expanded} />
+            </button>
+          </div>
         </div>
-      </div>
 
-      {expanded && (
-        <form
-          className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3"
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <div className="flex overflow-hidden rounded-lg border border-gray-300 bg-white focus-within:border-[#9361D7] focus-within:ring-1 focus-within:ring-[#9361D7]">
-            <span className="flex items-center border-r border-gray-300 bg-gray-50 px-3 text-sm text-gray-600">
-              +91
-            </span>
-            <input
-              type="tel"
-              placeholder="Mobile number*"
-              className="w-full px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none"
-            />
-          </div>
-
-          <div className="flex gap-3 md:contents">
-            <input
-              type="text"
-              placeholder="Enter Captcha"
-              className="flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-[#9361D7] focus:outline-none focus:ring-1 focus:ring-[#9361D7] md:flex-none"
-            />
-            <div className="flex w-20 shrink-0 items-center justify-center rounded-lg bg-[#DBEAFE] text-lg font-semibold text-[#9361D7] md:w-auto md:px-6">
-              234
-            </div>
-          </div>
-
-          <div className="relative">
-            <select
-              defaultValue=""
-              className="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-400 focus:border-[#9361D7] focus:outline-none focus:ring-1 focus:ring-[#9361D7]"
-            >
-              <option value="" disabled>
-                Select City
-              </option>
-            </select>
-            <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
-              <ChevronIcon up={false} />
-            </span>
-          </div>
-
-          <div className="relative">
-            <select
-              defaultValue=""
-              className="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-400 focus:border-[#9361D7] focus:outline-none focus:ring-1 focus:ring-[#9361D7]"
-            >
-              <option value="" disabled>
-                Select Clinic
-              </option>
-            </select>
-            <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
-              <ChevronIcon up={false} />
-            </span>
-          </div>
-
-          <button
-            type="submit"
-            className="rounded-lg bg-[#9361D7] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 md:col-span-1"
+        {expanded && (
+          <form
+            className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3"
+            onSubmit={(e) => e.preventDefault()}
           >
-            Submit
-          </button>
-        </form>
-      )}
+            <div className="flex overflow-hidden rounded-lg border border-gray-300 bg-white focus-within:border-[#9361D7] focus-within:ring-1 focus-within:ring-[#9361D7]">
+              <span className="flex items-center border-r border-gray-300 bg-gray-50 px-3 text-sm text-gray-600">
+                +91
+              </span>
+              <input
+                type="tel"
+                placeholder="Mobile number*"
+                className="w-full px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none"
+              />
+            </div>
+
+            <div className="flex gap-3 md:contents">
+              <input
+                type="text"
+                placeholder="Enter Captcha"
+                className="flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-[#9361D7] focus:outline-none focus:ring-1 focus:ring-[#9361D7] md:flex-none"
+              />
+              <div className="flex w-20 shrink-0 items-center justify-center rounded-lg bg-[#DBEAFE] text-lg font-semibold text-[#9361D7] md:w-auto md:px-6">
+                234
+              </div>
+            </div>
+
+            <div className="relative">
+              <select
+                defaultValue=""
+                className="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-400 focus:border-[#9361D7] focus:outline-none focus:ring-1 focus:ring-[#9361D7]"
+              >
+                <option value="" disabled>
+                  Select City
+                </option>
+              </select>
+              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                <ChevronIcon up={false} />
+              </span>
+            </div>
+
+            <div className="relative">
+              <select
+                defaultValue=""
+                className="w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-400 focus:border-[#9361D7] focus:outline-none focus:ring-1 focus:ring-[#9361D7]"
+              >
+                <option value="" disabled>
+                  Select Clinic
+                </option>
+              </select>
+              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                <ChevronIcon up={false} />
+              </span>
+            </div>
+
+            <button
+              type="submit"
+              className="rounded-lg bg-[#9361D7] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 md:col-span-1"
+            >
+              Submit
+            </button>
+          </form>
+        )}
       </div>
     </div>
   )
@@ -218,25 +218,13 @@ function ClinicLocator() {
 export default function HeroSection() {
   return (
     <section>
-      <div className="hero-gradient relative overflow-hidden">
-        <div className="mx-auto flex max-w-6xl flex-row items-end">
-          <div className="flex-1 px-4 pb-6 pt-8 md:px-10 md:pb-10 md:pt-12">
-            <h1 className="text-xl font-bold leading-tight text-gray-900 sm:text-2xl md:text-4xl lg:text-[42px]">
-              Invisible Aligners for a dream smile
-            </h1>
-            <p className="mt-2 text-xs leading-relaxed text-gray-700 sm:mt-3 sm:text-sm md:text-base">
-              Book a Scan and avail a free Orthodontist Consult{' '}
-              <span className="font-bold text-[#9361D7]">worth ₹1500</span>
-            </p>
-          </div>
-          <div className="relative flex w-[42%] shrink-0 justify-end sm:w-[38%] md:w-[45%] lg:w-[42%]">
-            <img
-              src={womanHero}
-              alt="Smiling woman"
-              className="relative z-10 h-auto w-full object-contain object-bottom"
-            />
-          </div>
+      <div className="hero-gradient hero-banner h-[40vh]">
+        <div className='flex flex-col w-[80%] max-[800px]:w-[70%] max-[600px]:w-[65%] max-[350px]:w-full pl-[15rem] py-[13rem] gap-4 max-[2000px]:pl-[10rem] max-[2000px]:py-[8rem] max-[1250px]:pl-[5rem] max-[1250px]:py-[5rem] max-[1000px]:py-[3.5rem] max-[600px]:py-[2rem] max-[600px]:pl-[2rem] max-[400px]:py-[3rem] max-[400px]:pl-[1rem]'>
+          <h1 className="text-wrap font-bold text-[5rem] max-[2000px]:text-[3rem] max-[1250px]:text-[2.35rem] max-[1000px]:text-[1.75rem] max-[600px]:text-[1.5rem]">Invisible Aligners for a dream smile</h1>
+          <p className='text-[3rem] max-[1450px]:w-[80%] max-[350px]:w-[60%] font-semibold max-[2000px]:text-[2rem] max-[1250px]:text-[1.5rem] max-[1000px]:text-[1rem] max-[600px]:text-[0.85rem]'>Book a Scan and avail a free Orthodontist Consult {' '}
+            <span className='font-bold text-[#9361D7]'>worth ₹1500</span></p>
         </div>
+        <img src={womanHero} alt="Smiling woman" className='w-[50%] absolute bottom-0 right-2 min-[500px]:w-[25%] min-[500px]:right-20 min-[1250px]:w-[20%] min-[1250px]:right-40 min-[1500px]:right-80' />
       </div>
 
       <LeadForm />

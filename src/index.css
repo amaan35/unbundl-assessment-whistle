@@ -25,19 +25,78 @@ body {
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 40%, #e0f2fe 100%);
+  background-color: #f7f4fb;
   background-image:
-    radial-gradient(
-      ellipse 80px 40px at 20% 60%,
-      rgba(147, 97, 215, 0.08) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 80px 40px at 60% 30%,
-      rgba(147, 97, 215, 0.06) 0%,
-      transparent 70%
-    ),
-    linear-gradient(135deg, #f3e8ff 0%, #ede9fe 40%, #e0f2fe 100%);
+    url("data:image/svg+xml,%3Csvg width='80' height='56' viewBox='0 0 80 56' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10 Q40 42 72 10' fill='none' stroke='%239361D7' stroke-opacity='0.07' stroke-width='2'/%3E%3C/svg%3E"),
+    linear-gradient(90deg, #f3eef8 0%, #f8f5fc 45%, #ffffff 100%);
+  background-size:
+    80px 56px,
+    100% 100%;
+}
+
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner__desktop-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: min(44vw, 500px);
+  pointer-events: none;
+  transform: translateX(-8%);
+}
+
+.hero-banner__desktop-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-banner__desktop-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 340px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 2.5rem;
+}
+
+.hero-banner__desktop-content h1 {
+  max-width: 92%;
+  font-size: clamp(2rem, 3.4vw, 2.625rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #111827;
+  text-wrap: balance;
+}
+
+.hero-banner__desktop-content p {
+  margin-top: 1.25rem;
+  max-width: 28rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+@media (min-width: 1024px) {
+  .hero-banner__desktop-content {
+    min-height: 380px;
+    padding: 3rem 4rem;
+  }
+
+  .hero-banner__desktop-content h1 {
+    max-width: 94%;
+    font-size: 2.625rem;
+  }
+
+  .hero-banner__desktop-image {
+    width: min(40vw, 520px);
+    transform: translateX(-10%);
+  }
 }
 
 @keyframes marquee {
