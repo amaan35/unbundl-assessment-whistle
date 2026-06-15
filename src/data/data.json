@@ -184,5 +184,28 @@
       "question": "How long does the treatment take?",
       "answer": "Typically, it may take 6-12 months for correcting the 'social six (front teeth). For more complex cases such as crowded teeth, the treatment time could be 12-24 months or slightly longer. The best person to give advice on this your Orthodontist."
     }
-  ]
+  ],
+  "footer": {
+    "quickLinks": [
+      { "label": "Home", "href": "#" },
+      { "label": "Book a Free Scan", "href": "#" },
+      { "label": "How it Works", "href": "#" },
+      { "label": "Range of Aligners", "href": "#" },
+      { "label": "Aligners vs Braces", "href": "#" },
+      { "label": "FAQs", "href": "#" }
+    ],
+    "legalLinks": [
+      { "label": "Privacy Policy", "href": "#" },
+      { "label": "Terms of Service", "href": "#" }
+    ],
+    "contact": {
+      "phone": "011-6932-8350",
+      "email": "support@whistle.in"
+    },
+    "socialLinks": [
+      { "id": "instagram", "label": "Instagram", "href": "#" },
+      { "id": "facebook", "label": "Facebook", "href": "#" },
+      { "id": "x", "label": "X", "href": "#" }
+    ]
+  }
 }

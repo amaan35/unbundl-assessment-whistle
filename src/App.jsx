@@ -10,6 +10,7 @@ import ComparisonSection from './components/ComparisonSection'
 import FourStepsSection from './components/FourStepsSection'
 import DoctorLedSection from './components/DoctorLedSection'
 import FaqSection from './components/FaqSection'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <FourStepsSection />
       <DoctorLedSection />
       <FaqSection />
+      <Footer />
     </div>
   )
 }
