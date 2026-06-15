@@ -1,0 +1,45 @@
+{
+  "marqueeItems": [
+    {
+      "text": "Our inaugural launch benefit"
+    },
+    {
+      "text": "Free teeth scan",
+      "highlight": "worth ₹500"
+    },
+    {
+      "text": "Free orthodontic consultation",
+      "highlight": "worth ₹1500"
+    }
+  ],
+  "results": [
+    {
+      "id": "gaps",
+      "beforeImage": "results-gaps-before.png",
+      "afterImage": "results-gaps-after.png",
+      "concern": "Gaps",
+      "duration": "8 months"
+    },
+    {
+      "id": "crooked-teeth",
+      "beforeImage": "crooked-teeth-before.png",
+      "afterImage": "crooked-teeth-after.png",
+      "concern": "Crooked Teeth",
+      "duration": "10 months"
+    },
+    {
+      "id": "open-bite",
+      "beforeImage": "openbite-before.png",
+      "afterImage": "openbite-after.png",
+      "concern": "Open Bite",
+      "duration": "12 months"
+    },
+    {
+      "id": "protruding-teeth",
+      "beforeImage": "protruding-teeth-before.png",
+      "afterImage": "protruding-teeth-after.png",
+      "concern": "Protruding Teeth",
+      "duration": "9 months"
+    }
+  ]
+}
