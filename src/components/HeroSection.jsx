@@ -218,13 +218,13 @@ function ClinicLocator() {
 export default function HeroSection() {
   return (
     <section>
-      <div className="hero-gradient hero-banner h-[40vh]">
-        <div className='flex flex-col w-[80%] max-[800px]:w-[70%] max-[600px]:w-[65%] max-[350px]:w-full pl-[15rem] py-[13rem] gap-4 max-[2000px]:pl-[10rem] max-[2000px]:py-[8rem] max-[1250px]:pl-[5rem] max-[1250px]:py-[5rem] max-[1000px]:py-[3.5rem] max-[600px]:py-[2rem] max-[600px]:pl-[2rem] max-[400px]:py-[3rem] max-[400px]:pl-[1rem]'>
-          <h1 className="text-wrap font-bold text-[5rem] max-[2000px]:text-[3rem] max-[1250px]:text-[2.35rem] max-[1000px]:text-[1.75rem] max-[600px]:text-[1.5rem]">Invisible Aligners for a dream smile</h1>
-          <p className='text-[3rem] max-[1450px]:w-[80%] max-[350px]:w-[60%] font-semibold max-[2000px]:text-[2rem] max-[1250px]:text-[1.5rem] max-[1000px]:text-[1rem] max-[600px]:text-[0.85rem]'>Book a Scan and avail a free Orthodontist Consult {' '}
+      <div className="hero-gradient hero-banner h-[40vh] min-[1200px]:h-[45vh]">
+        <div className='flex flex-col'>
+          <h1 className="text-wrap font-bold">Invisible Aligners for a dream smile</h1>
+          <p className=''>Book a Scan and avail a free Orthodontist Consult {' '}
             <span className='font-bold text-[#9361D7]'>worth ₹1500</span></p>
         </div>
-        <img src={womanHero} alt="Smiling woman" className='w-[50%] absolute bottom-0 right-2 min-[500px]:w-[25%] min-[500px]:right-20 min-[1250px]:w-[20%] min-[1250px]:right-40 min-[1500px]:right-80' />
+        <img src={womanHero} alt="Smiling woman" className='w-[50%] absolute bottom-0 right-2 min-[450px]:w-[40%] min-[450px]:right-10 min-[590px]:w-[35%] min-[590px]:right-10 min-[670px]:w-[30%] min-[670px]:right-10 min-[775px]:w-[25%] min-[775px]:right-20 min-[900px]:w-[20%] min-[900px]:right-[20%] ' />
       </div>
 
       <LeadForm />
