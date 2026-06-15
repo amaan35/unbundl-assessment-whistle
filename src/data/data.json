@@ -41,5 +41,51 @@
       "concern": "Protruding Teeth",
       "duration": "9 months"
     }
+  ],
+  "whyWhistle": [
+    {
+      "id": "custom-made",
+      "image": "why-whistle-custom-made-invisible.png",
+      "title": "Custom-made & invisible",
+      "description": "Tailored for your teeth and smile with a clear, discreet appearance."
+    },
+    {
+      "id": "predictable-results",
+      "image": "why-whistle-predictable-results.png",
+      "title": "Predictable results",
+      "description": "Advanced 3D modeling and AI-technology for precise planning and predictable results."
+    },
+    {
+      "id": "partnership",
+      "image": "why-whistle-partnership-clove-dental.png",
+      "title": "Partnership with Clove Dental",
+      "description": "Led by highly experienced Orthodontists of Clove Dental and Whistle that have corrected over 2 lakh smiles."
+    },
+    {
+      "id": "unlimited-aligners",
+      "image": "why-whistle-unlimited-aligners.png",
+      "title": "Unlimited Aligners*",
+      "description": "Unlimited aligners and doctor consults at no extra cost."
+    }
+  ],
+  "whistleDifference": [
+    {
+      "id": "next-gen",
+      "icon": "nextGen",
+      "title": "Next-Gen",
+      "description": "Crafted with top-notch 3D printing, laser tech, and Zendura FLX material."
+    },
+    {
+      "id": "hassle-free",
+      "icon": "hassleFree",
+      "title": "Hassle-Free",
+      "description": "Predictable, comfortable & lifestyle-friendly for an easy smile transformation."
+    },
+    {
+      "id": "transparent-pricing",
+      "icon": "transparentPricing",
+      "title": "Transparent Pricing",
+      "description": "Everything's included - from scans to aligners, doctor consults, and retainers - no hidden costs."
+    }
   ]
 }

@@ -4,6 +4,8 @@ import HeroSection from './components/HeroSection'
 import Marquee from './components/Marquee'
 import ProductSection from './components/ProductSection'
 import ResultsSection from './components/ResultsSection'
+import WhyWhistleSection from './components/WhyWhistleSection'
+import WhistleDifferenceSection from './components/WhistleDifferenceSection'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Marquee />
       <ProductSection />
       <ResultsSection />
+      <WhyWhistleSection />
+      <WhistleDifferenceSection />
     </div>
   )
 }
