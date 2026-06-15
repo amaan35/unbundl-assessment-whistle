@@ -9,6 +9,7 @@ import WhistleDifferenceSection from './components/WhistleDifferenceSection'
 import ComparisonSection from './components/ComparisonSection'
 import FourStepsSection from './components/FourStepsSection'
 import DoctorLedSection from './components/DoctorLedSection'
+import FaqSection from './components/FaqSection'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <ComparisonSection />
       <FourStepsSection />
       <DoctorLedSection />
+      <FaqSection />
     </div>
   )
 }
