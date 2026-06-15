@@ -7,6 +7,8 @@ import ResultsSection from './components/ResultsSection'
 import WhyWhistleSection from './components/WhyWhistleSection'
 import WhistleDifferenceSection from './components/WhistleDifferenceSection'
 import ComparisonSection from './components/ComparisonSection'
+import FourStepsSection from './components/FourStepsSection'
+import DoctorLedSection from './components/DoctorLedSection'
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <WhyWhistleSection />
       <WhistleDifferenceSection />
       <ComparisonSection />
+      <FourStepsSection />
+      <DoctorLedSection />
     </div>
   )
 }
