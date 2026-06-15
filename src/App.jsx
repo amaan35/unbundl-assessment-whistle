@@ -6,6 +6,7 @@ import ProductSection from './components/ProductSection'
 import ResultsSection from './components/ResultsSection'
 import WhyWhistleSection from './components/WhyWhistleSection'
 import WhistleDifferenceSection from './components/WhistleDifferenceSection'
+import ComparisonSection from './components/ComparisonSection'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <ResultsSection />
       <WhyWhistleSection />
       <WhistleDifferenceSection />
+      <ComparisonSection />
     </div>
   )
 }
