@@ -39,45 +39,49 @@ export default function ProductSection() {
         </div>
 
         <div className="mx-auto w-full max-w-md flex-1 rounded-2xl bg-white p-6 shadow-md md:max-w-lg">
-          <div className="flex items-start justify-between gap-4">
+          <div className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-0">
             <div>
               <h3 className="text-lg font-bold text-gray-900">
                 Whistle Aligners
               </h3>
-              <p className="mt-2 text-sm text-gray-700">
-                <span className="text-gray-400 line-through">₹84,000</span>{' '}
-                starting at{' '}
-                <span className="text-lg font-bold text-[#9361D7]">
-                  ₹47,999
-                </span>
-              </p>
-              <p className="text-xs text-gray-500">inc. of all taxes</p>
+              <div className="mt-2 text-sm text-gray-700">
+                <p className="text-gray-400 line-through">₹84,000</p>
+                <p>
+                  starting at{' '}
+                  <span className="text-lg font-bold text-[#9361D7]">
+                    ₹47,999
+                  </span>
+                </p>
+                <p className="text-xs text-gray-500">inc. of all taxes</p>
+              </div>
+
+              <ul className="mt-4 space-y-2">
+                <li className="flex items-center max-sm:text-xs gap-2 text-sm text-gray-700">
+                  <CheckIcon />
+                  Offer valid for a limited time
+                </li>
+                <li className="flex items-center max-sm:text-xs gap-2 text-sm text-gray-700">
+                  <CheckIcon />
+                  Easy financing options
+                </li>
+              </ul>
             </div>
-            <img
-              src={whistleAligners}
-              alt="Whistle Aligners case"
-              className="h-24 w-24 shrink-0 object-contain md:h-28 md:w-28"
-            />
+
+            <div className="flex flex-col items-end justify-between">
+              <img
+                src={whistleAligners}
+                alt="Whistle Aligners case"
+                className="h-24 w-24 shrink-0 object-contain md:h-28 md:w-28"
+              />
+              <a
+                href="#"
+                className="inline-flex items-center gap-1 text-sm font-medium text-[#9361D7] hover:underline"
+              >
+                Learn more
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
-
-          <ul className="mt-4 space-y-2">
-            <li className="flex items-center gap-2 text-sm text-gray-700">
-              <CheckIcon />
-              Offer valid for a limited time
-            </li>
-            <li className="flex items-center gap-2 text-sm text-gray-700">
-              <CheckIcon />
-              Easy financing options
-            </li>
-          </ul>
-
-          <a
-            href="#"
-            className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#9361D7] hover:underline"
-          >
-            Learn more
-            <span aria-hidden="true">→</span>
-          </a>
         </div>
       </div>
 
