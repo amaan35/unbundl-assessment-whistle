@@ -218,13 +218,17 @@ function ClinicLocator() {
 export default function HeroSection() {
   return (
     <section>
-      <div className="hero-gradient hero-banner h-[40vh] min-[1200px]:h-[45vh]">
-        <div className='flex flex-col'>
-          <h1 className="text-wrap font-bold">Invisible Aligners for a dream smile</h1>
-          <p className=''>Book a Scan and avail a free Orthodontist Consult {' '}
+      <div className="hero-gradient relative h-[40vh] overflow-hidden min-[1200px]:h-[45vh]">
+        <div className='flex flex-col space-y-5 px-[5%] max-md:pt-[10%] pt-[7%] min-[1000px]:px-[8%]'>
+          <h1 className="text-wrap font-bold text-2xl w-full min-[361px]:w-[65%] min-[540px]:text-3xl min-[820px]:w-[75%] min-[1000px]:text-[2rem] min-[1200px]:text-[2.5rem]">Invisible Aligners for a dream smile</h1>
+          <p className='w-[50%] text-wrap min-[540px]:text-xl min-[1000px]:text-2xl min-[1200px]:text-[1.5rem]'>Book a Scan and avail a free Orthodontist Consult {' '}
             <span className='font-bold text-[#9361D7]'>worth ₹1500</span></p>
         </div>
-        <img src={womanHero} alt="Smiling woman" className='w-[50%] absolute bottom-0 right-2 min-[450px]:w-[40%] min-[450px]:right-10 min-[590px]:w-[35%] min-[590px]:right-10 min-[670px]:w-[30%] min-[670px]:right-10 min-[775px]:w-[25%] min-[775px]:right-20 min-[900px]:w-[20%] min-[900px]:right-[20%] ' />
+        <img
+          src={womanHero}
+          alt="Smiling woman"
+          className="absolute bottom-0 right-2 min-[610px]:right-[10%] md:right-[12%] lg:right-[17%] xl:right-[20%] 2xl:right-[25%] h-[92%] w-auto max-w-[min(50%,420px)] object-contain object-bottom"
+        />
       </div>
 
       <LeadForm />
