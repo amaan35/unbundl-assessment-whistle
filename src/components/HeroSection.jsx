@@ -54,59 +54,70 @@ function LeadForm() {
         </label>
       </div>
 
-      <div className="mx-auto mt-6 flex max-w-2xl flex-col gap-4 md:flex-row">
-        <div className="flex-1">
-          <label
-            htmlFor="fullName"
-            className="mb-1.5 block text-xs font-medium text-gray-700"
-          >
-            Full Name<span className="md:hidden">*</span>
-          </label>
-          <input
-            id="fullName"
-            type="text"
-            placeholder="Ajay Kumar"
-            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-[#9361D7] focus:outline-none focus:ring-1 focus:ring-[#9361D7]"
-          />
-        </div>
-        <div className="flex-1">
-          <label
-            htmlFor="mobile"
-            className="mb-1.5 block text-xs font-medium text-gray-700 md:sr-only"
-          >
-            Mobile number
-          </label>
-          <div className="flex overflow-hidden rounded-lg border border-gray-300 bg-white focus-within:border-[#9361D7] focus-within:ring-1 focus-within:ring-[#9361D7]">
-            <span className="flex items-center border-r border-gray-300 bg-gray-50 px-3 text-sm text-gray-600">
-              +91
-            </span>
-            <input
-              id="mobile"
-              type="tel"
-              placeholder="Mobile number*"
-              className="w-full px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none"
-            />
+      <div className="mx-auto mt-6 max-w-2xl lg:max-w-5xl">
+        <div className="flex flex-col gap-4 lg:grid lg:grid-cols-3 lg:items-end lg:gap-4">
+          <div className="flex flex-col gap-4 md:flex-row lg:contents">
+            <div className="min-w-0 flex-1 lg:w-full">
+              <label
+                htmlFor="fullName"
+                className="mb-1.5 block text-xs font-medium text-gray-700"
+              >
+                Full Name*
+              </label>
+              <input
+                id="fullName"
+                type="text"
+                placeholder="Ajay Kumar"
+                className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-[#9361D7] focus:outline-none focus:ring-1 focus:ring-[#9361D7]"
+              />
+            </div>
+            <div className="min-w-0 flex-1 lg:w-full">
+              <label
+                htmlFor="mobile"
+                className="mb-1.5 block text-xs font-medium text-gray-700 lg:sr-only"
+              >
+                Mobile number
+              </label>
+              <div className="flex overflow-hidden rounded-lg border border-gray-300 bg-white focus-within:border-[#9361D7] focus-within:ring-1 focus-within:ring-[#9361D7]">
+                <span className="flex items-center border-r border-gray-300 bg-gray-50 px-3 text-sm text-gray-600 lg:hidden">
+                  +91
+                </span>
+                <input
+                  id="mobile"
+                  type="tel"
+                  placeholder="Mobile number*"
+                  className="w-full px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none"
+                />
+              </div>
+            </div>
           </div>
+
+          <button
+            type="button"
+            className="hidden w-full rounded-lg bg-[#9361D7] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 lg:block"
+          >
+            Book a Free Scan
+          </button>
         </div>
+
+        <label className="mt-4 flex cursor-pointer items-start gap-2">
+          <input
+            type="checkbox"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-[#9361D7]"
+          />
+          <span className="text-xs leading-relaxed text-gray-500">
+            I hereby consent to receive calls / messages from Whistle and its
+            partners and override DND settings.
+          </span>
+        </label>
+
+        <button
+          type="button"
+          className="mt-6 block w-full rounded-lg bg-[#9361D7] px-6 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90 lg:hidden"
+        >
+          Book a Free Scan
+        </button>
       </div>
-
-      <label className="mx-auto mt-4 flex max-w-2xl cursor-pointer items-start gap-2">
-        <input
-          type="checkbox"
-          className="mt-0.5 h-4 w-4 shrink-0 accent-[#9361D7]"
-        />
-        <span className="text-xs leading-relaxed text-gray-500">
-          I hereby consent to receive calls / messages from Whistle and its
-          partners and override DND settings.
-        </span>
-      </label>
-
-      <button
-        type="button"
-        className="mx-auto mt-6 block w-full max-w-2xl rounded-lg bg-[#9361D7] px-6 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-      >
-        Book a Free Scan
-      </button>
     </div>
   )
 }
