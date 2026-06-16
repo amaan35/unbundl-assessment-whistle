@@ -75,27 +75,27 @@ function CellValue({ cell }) {
 function ComparisonRow({ feature, isExpanded, onToggle }) {
   return (
     <div className="border-b border-gray-200 last:border-b-0">
-      <div className="grid grid-cols-[1.4fr_1fr_1fr] md:grid-cols-[1.5fr_1fr_1fr]">
-        <button
-          type="button"
-          onClick={onToggle}
-          aria-expanded={isExpanded}
-          className="flex items-center justify-between gap-2 px-3 py-4 text-left transition-colors hover:bg-gray-50 md:px-6 md:py-5"
-        >
-          <span className="text-xs font-semibold text-gray-900 md:text-sm">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={isExpanded}
+        className="grid w-full cursor-pointer grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,1fr)] items-stretch text-left transition-colors hover:bg-gray-50 md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)_minmax(0,1fr)]"
+      >
+        <div className="flex min-w-0 w-full items-center justify-between gap-2 px-2 py-4 md:items-center md:px-6 md:py-5">
+          <span className="min-w-0 text-wrap text-xs text-gray-900 md:text-sm">
             {feature.title}
           </span>
           <ChevronIcon expanded={isExpanded} />
-        </button>
+        </div>
 
-        <div className="flex items-center justify-center bg-[#EAF4FB] px-2 py-4 md:py-5">
+        <div className="flex w-full items-center justify-center self-stretch bg-[#EAF4FB] px-2 py-4 md:py-5">
           <CellValue cell={feature.whistle} />
         </div>
 
-        <div className="flex items-center justify-center px-2 py-4 md:py-5">
+        <div className="flex w-full items-center justify-center self-stretch px-2 py-4 md:py-5">
           <CellValue cell={feature.otherBrands} />
         </div>
-      </div>
+      </button>
 
       <div
         className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
@@ -138,20 +138,20 @@ export default function ComparisonSection() {
       </h2>
 
       <div className="mx-auto mt-8 max-w-5xl overflow-hidden rounded-2xl border border-gray-200 md:rounded-3xl">
-        <div className="grid grid-cols-[1.4fr_1fr_1fr] border-b border-gray-200 md:grid-cols-[1.5fr_1fr_1fr]">
-          <div className="px-3 py-4 md:px-6 md:py-5">
+        <div className="grid grid-cols-[1.4fr_1fr_1fr] items-stretch border-b border-gray-200 md:grid-cols-[1.5fr_1fr_1fr]">
+          <div className="flex items-center justify-center px-3 py-4 md:px-6 md:py-5">
             <span className="text-xs font-bold text-gray-900 md:text-sm">
               Features
             </span>
           </div>
-          <div className="flex items-center justify-center bg-[#EAF4FB] px-2 py-4 md:py-5">
+          <div className="flex w-full items-center justify-center self-stretch bg-[#EAF4FB] px-2 py-4 md:py-5">
             <img
               src={whistleLogo}
               alt="Whistle"
-              className="h-7 w-auto md:h-8"
+              className="h-5 w-auto md:h-8"
             />
           </div>
-          <div className="flex items-center justify-center px-2 py-4 md:py-5">
+          <div className="flex w-full items-center justify-center self-stretch px-2 py-4 md:py-5">
             <span className="text-xs font-bold text-gray-900 md:text-sm">
               Other Brands
             </span>

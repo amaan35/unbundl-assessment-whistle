@@ -1,18 +1,38 @@
 import whistleLogo from '../assets/header-whistle-and-smile-logo.png'
+import data from '../data/data.json'
 
-function PhoneIcon() {
+const phoneNumber = data.footer.contact.phone.replace(/-/g, '')
+
+function PhoneRingIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="h-5 w-5"
+      className="h-5 w-5 shrink-0"
       aria-hidden="true"
     >
+      <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" />
       <path
-        fillRule="evenodd"
-        d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
-        clipRule="evenodd"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        d="M15.5 3.5c1.2.8 2 2.1 2 3.5"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        d="M17.5 1.5c2 1.3 3.3 3.5 3.3 6"
+      />
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        d="M13.5 5.5c.7.45 1.15 1.15 1.25 2"
       />
     </svg>
   )
@@ -24,15 +44,16 @@ export default function Header() {
       <img
         src={whistleLogo}
         alt="Whistle and Smile"
-        className="h-10 w-auto md:h-12"
+        className="h-8 w-auto md:h-12"
       />
-      <button
-        type="button"
-        aria-label="Call us"
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#9361D7] text-white transition-opacity hover:opacity-90 md:h-11 md:w-11"
+      <a
+        href={`tel:${phoneNumber}`}
+        aria-label={`Call us at ${phoneNumber}`}
+        className="flex items-center gap-2 rounded-full bg-[#9361D7] px-2 py-2.5 text-xs font-bold text-white transition-opacity hover:opacity-90 md:gap-2.5 md:px-5 md:py-3 md:text-base"
       >
-        <PhoneIcon />
-      </button>
+        <PhoneRingIcon />
+        {phoneNumber}
+      </a>
     </header>
   )
 }

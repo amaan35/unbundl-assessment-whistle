@@ -108,16 +108,16 @@ function SocialIcons({ className = '' }) {
 export default function Footer() {
   return (
     <footer className="bg-[#121212] text-white">
-      <div className="mx-auto max-w-6xl px-6 py-10 md:px-10 md:py-14">
+      <div className="mx-auto max-w-6xl px-6 py-5 md:px-10 md:py-14">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-10">
           <div>
             <h3 className="text-sm font-bold md:text-base">Quick Links</h3>
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-4 space-y-1">
               {data.footer.quickLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-white/90 transition-opacity hover:opacity-80"
+                    className="max-md:text-xs text-sm text-white/90 transition-opacity hover:opacity-80"
                   >
                     {link.label}
                   </a>
@@ -130,11 +130,11 @@ export default function Footer() {
             <h3 className="text-sm font-bold md:text-base">
               Get in Touch Now!
             </h3>
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-4 space-y-2">
               <li>
                 <a
                   href={`tel:${data.footer.contact.phone}`}
-                  className="flex items-center gap-2 text-sm text-white/90 transition-opacity hover:opacity-80"
+                  className="flex items-center gap-2 max-md:text-xs text-sm text-white/90 transition-opacity hover:opacity-80"
                 >
                   <PhoneIcon />
                   {data.footer.contact.phone}
@@ -143,7 +143,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${data.footer.contact.email}`}
-                  className="flex items-center gap-2 text-sm text-white/90 transition-opacity hover:opacity-80"
+                  className="flex items-center gap-2 text-xs text-white/90 transition-opacity hover:opacity-80"
                 >
                   <EmailIcon />
                   {data.footer.contact.email}

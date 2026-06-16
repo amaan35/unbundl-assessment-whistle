@@ -126,30 +126,46 @@ function ClinicLocator() {
   const [expanded, setExpanded] = useState(false)
 
   return (
-    <div className="bg-[#F0F7FF] px-4 py-6 md:px-10 md:py-8">
-      <div className="mx-auto max-w-6xl md:rounded-[32px] md:bg-[#F0F7FF]">
-        <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-          <h2 className="text-base font-bold leading-snug text-gray-900 md:max-w-xl md:text-xl lg:text-2xl">
-            <span className="hidden md:inline">
-              Book a Free 3D Teeth Scan and Orthodontist Consult in a Clove
-              Dental Clinic near you.
-            </span>
-            <span className="md:hidden">
-              Book Free Orthodontist Consult at a Clove Dental Clinic. 450+
-              Clinics near you
-            </span>
+    <div className="bg-[#F0F7FF] px-4 py-6 md:px-10 md:py-8 lg:bg-white lg:px-10 lg:py-8">
+      <div className="mx-auto max-w-6xl md:rounded-[32px] lg:rounded-[32px] lg:bg-[#F0F7FF] lg:p-8 xl:p-10">
+        <div className="md:hidden">
+          <h2 className="text-base font-bold leading-snug text-gray-900">
+            Book Free Orthodontist Consult at a Clove Dental Clinic. 450+
+            Clinics near you
           </h2>
-
-          <div className="flex items-center justify-between md:flex-col md:items-end">
+          <div className="mt-4 flex items-center justify-between">
             <img
               src={cloveLogo}
               alt="Clove Dental"
-              className="h-10 w-auto md:h-12"
+              className="h-10 w-auto"
             />
             <button
               type="button"
               onClick={() => setExpanded(!expanded)}
-              className="flex items-center gap-1 text-sm font-medium text-[#9361D7] md:mt-3"
+              className="flex items-center gap-1 text-sm font-medium text-[#9361D7]"
+              aria-expanded={expanded}
+            >
+              Find Clinic
+              <ChevronIcon up={expanded} />
+            </button>
+          </div>
+        </div>
+
+        <div className="hidden md:flex md:items-start md:justify-between">
+          <h2 className="max-w-xl text-xl font-bold leading-snug text-gray-900 lg:text-2xl">
+            Book a Free 3D Teeth Scan and Orthodontist Consult in a Clove
+            Dental Clinic near you.
+          </h2>
+          <div className="flex flex-col items-end">
+            <img
+              src={cloveLogo}
+              alt="Clove Dental"
+              className="h-12 w-auto"
+            />
+            <button
+              type="button"
+              onClick={() => setExpanded(!expanded)}
+              className="mt-3 flex items-center cursor-pointer gap-1 text-sm font-medium text-[#9361D7]"
               aria-expanded={expanded}
             >
               Find Clinic
@@ -160,7 +176,7 @@ function ClinicLocator() {
 
         {expanded && (
           <form
-            className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3"
+            className="mt-4 flex flex-col gap-4 md:mt-6 md:grid md:grid-cols-3 md:gap-4"
             onSubmit={(e) => e.preventDefault()}
           >
             <div className="flex overflow-hidden rounded-lg border border-gray-300 bg-white focus-within:border-[#9361D7] focus-within:ring-1 focus-within:ring-[#9361D7]">
@@ -174,13 +190,13 @@ function ClinicLocator() {
               />
             </div>
 
-            <div className="flex gap-3 md:contents">
+            <div className="grid grid-cols-2 gap-3 md:contents">
               <input
                 type="text"
                 placeholder="Enter Captcha"
-                className="flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-[#9361D7] focus:outline-none focus:ring-1 focus:ring-[#9361D7] md:flex-none"
+                className="rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-[#9361D7] focus:outline-none focus:ring-1 focus:ring-[#9361D7]"
               />
-              <div className="flex w-20 shrink-0 items-center justify-center rounded-lg bg-[#DBEAFE] text-lg font-semibold text-[#9361D7] md:w-auto md:px-6">
+              <div className="flex items-center rounded-lg bg-[#DBEAFE] px-4 py-3 text-sm md:text-black text-[#9361D7] md:w-fit md:min-w-[4.5rem] md:self-start md:text-lg lg:min-w-[5rem]">
                 234
               </div>
             </div>
@@ -215,7 +231,7 @@ function ClinicLocator() {
 
             <button
               type="submit"
-              className="rounded-lg bg-[#9361D7] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 md:col-span-1"
+              className="w-full rounded-lg bg-[#9361D7] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 md:w-full"
             >
               Submit
             </button>

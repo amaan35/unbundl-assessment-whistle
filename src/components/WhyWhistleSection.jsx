@@ -13,17 +13,17 @@ const imageMap = {
 
 function WhyCard({ card }) {
   return (
-    <article className="w-[260px] shrink-0 overflow-hidden rounded-2xl bg-[#F0F9FF] md:w-auto md:flex-1">
+    <article className="w-[240px] shrink-0 overflow-hidden rounded-2xl bg-[#F0F9FF] md:w-auto md:flex-1">
       <img
         src={imageMap[card.image]}
         alt={card.title}
-        className="aspect-[4/3] w-full rounded-t-2xl object-cover"
+        className="aspect-square max-md:aspect-[4/3] w-full rounded-t-2xl object-cover"
       />
       <div className="px-4 py-4 md:px-5 md:py-5">
-        <h3 className="text-sm font-bold text-gray-900 md:text-base">
+        <h3 className="text-sm font-bold text-gray-900 md:text-lg">
           {card.title}
         </h3>
-        <p className="mt-2 text-xs leading-relaxed text-gray-600 md:text-sm">
+        <p className="mt-2 text-xs leading-relaxed md:text-sm">
           {card.description}
         </p>
       </div>
@@ -33,12 +33,12 @@ function WhyCard({ card }) {
 
 export default function WhyWhistleSection() {
   return (
-    <section className="bg-white px-4 py-10 md:px-10 md:py-16">
+    <section className="bg-white py-10 md:px-10 md:py-16">
       <h2 className="text-center text-2xl font-bold text-gray-900 md:text-3xl">
         Why Whistle?
       </h2>
 
-      <div className="mt-8 flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-4 md:overflow-visible md:pb-0">
+      <div className="scrollbar-hide mt-8 px-4 flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-4 md:overflow-visible md:pb-0">
         {data.whyWhistle.map((card) => (
           <WhyCard key={card.id} card={card} />
         ))}

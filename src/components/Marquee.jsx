@@ -18,7 +18,7 @@ function MarqueeContent() {
 
 export default function Marquee() {
   return (
-    <div className="overflow-hidden bg-[#DCFCE7] py-3">
+    <div className="overflow-hidden bg-gradient-to-r from-[#DCFCE7] to-[#E0F2FE] py-3">
       <div className="marquee-track flex whitespace-nowrap text-sm text-gray-800 md:text-base">
         <div className="marquee-content flex">
           <MarqueeContent />

@@ -1,76 +1,25 @@
 import data from '../data/data.json'
 import whistleDiffImg from '../assets/the-whistle-diff.png'
-
-function NextGenIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 48 48"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      className="h-10 w-10 text-gray-700"
-      aria-hidden="true"
-    >
-      <rect x="8" y="28" width="32" height="12" rx="2" />
-      <path d="M16 28V18h16v10" />
-      <path d="M20 18V12h8v6" />
-      <circle cx="24" cy="8" r="3" />
-      <path d="M14 34h20" />
-    </svg>
-  )
-}
-
-function HassleFreeIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 48 48"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      className="h-10 w-10 text-gray-700"
-      aria-hidden="true"
-    >
-      <path d="M8 36L18 24l8 8 14-16" />
-      <circle cx="34" cy="14" r="6" />
-      <path d="M31 14h6M34 11v6" />
-    </svg>
-  )
-}
-
-function TransparentPricingIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 48 48"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      className="h-10 w-10 text-gray-700"
-      aria-hidden="true"
-    >
-      <path d="M12 28c0-6 5-10 12-10s12 4 12 10" />
-      <ellipse cx="24" cy="28" rx="16" ry="6" />
-      <circle cx="24" cy="20" r="8" />
-      <path d="M21 20h6M24 17v6" />
-    </svg>
-  )
-}
+import nextGenIcon from '../assets/the-whistle-diff-next-gen.png'
+import hassleFreeIcon from '../assets/the-whistle-diff-hassle-free.png'
+import transparentPricingIcon from '../assets/the-whistle-diff-transparent-pricing.png'
 
 const iconMap = {
-  nextGen: NextGenIcon,
-  hassleFree: HassleFreeIcon,
-  transparentPricing: TransparentPricingIcon,
+  nextGen: nextGenIcon,
+  hassleFree: hassleFreeIcon,
+  transparentPricing: transparentPricingIcon,
 }
 
 function FeatureItem({ feature }) {
-  const Icon = iconMap[feature.icon]
-
   return (
     <div className="flex gap-4 border-b border-gray-100 py-5 last:border-b-0 md:py-6">
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gray-50">
-        <Icon />
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center">
+        <img
+          src={iconMap[feature.icon]}
+          alt=""
+          className="h-10 w-10 object-contain"
+          aria-hidden="true"
+        />
       </div>
       <div>
         <h3 className="text-sm font-bold text-gray-900 md:text-base">
