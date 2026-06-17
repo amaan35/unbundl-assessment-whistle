@@ -1,16 +1,48 @@
-# React + Vite
+# Whistle Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive landing page for Whistle dental aligners, built as a React + Tailwind CSS assessment project.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Requirements:** Node.js 18+ and npm
 
-## React Compiler
+```bash
+# Install dependencies
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Start development server
+npm run dev
 
-## Expanding the ESLint configuration
+# Production build
+npm run build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Preview production build locally
+npm run preview
+```
+
+Open the URL shown in the terminal after running `npm run dev` (typically `http://localhost:5173`).
+
+## API Used
+
+**[picsum.photos](https://picsum.photos)** — placeholder images for the **Results** and **Why Whistle?** sections. URLs are generated from each item’s `id` (e.g. `https://picsum.photos/seed/gaps-before/400/400`). Brand and layout assets (logo, hero image, product shot, etc.) are local files in `src/assets/` as they were part a single image component so it was preferred to keep the original images for them.
+
+## Mock Data
+
+Repetitive section content lives in local JSON files under `src/data/` and is imported directly into components:
+
+| File | Used in |
+|------|---------|
+| `marquee.json` | Marquee |
+| `results.json` | ResultsSection |
+| `whyWhistle.json` | WhyWhistleSection |
+| `whistleDifference.json` | WhistleDifferenceSection |
+| `comparisonFeatures.json` | ComparisonSection |
+| `smileSteps.json` | FourStepsSection |
+| `faqs.json` | FaqSection |
+| `footer.json` | Footer, Header |
+
+One-off UI copy (hero headings, form labels, section titles where not repeated) stays in the components themselves.
+
+## Approach
+
+The page is built as a set of small, section focused React components with Tailwind CSS, no UI component library. Layout and spacing were tuned per breakpoint (mobile first, with extra handling for bigger screens specially for hero section). Interactive pieces (clinic locator expand/collapse, comparison table accordion, FAQ accordion) use local React state. Styling was implemented primarily with Tailwind CSS, with some additional custom styles defined in index.css.
