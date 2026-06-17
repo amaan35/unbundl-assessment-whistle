@@ -1,4 +1,4 @@
-import data from '../data/data.json'
+import whyWhistle from '../data/whyWhistle.json'
 
 function WhyCard({ card }) {
   const imageUrl = `https://picsum.photos/seed/${card.id}/400/400`
@@ -30,7 +30,7 @@ export default function WhyWhistleSection() {
       </h2>
 
       <div className="scrollbar-hide mt-8 px-4 flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-4 md:overflow-visible md:pb-0">
-        {data.whyWhistle.map((card) => (
+        {whyWhistle.map((card) => (
           <WhyCard key={card.id} card={card} />
         ))}
       </div>

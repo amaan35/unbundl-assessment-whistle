@@ -1,4 +1,4 @@
-import data from '../data/data.json'
+import results from '../data/results.json'
 
 function ResultCard({ result }) {
   const beforeUrl = `https://picsum.photos/seed/${result.id}-before/400/400`
@@ -28,7 +28,7 @@ function ResultCard({ result }) {
       <div className="mt-3 border-t border-[#BAE6FD] text-sm text-gray-700">
         <div className="flex items-center justify-between border-b border-[#BAE6FD] py-2.5">
           <span>Concern</span>
-          <span className="text-gray-900">{result.concern}</span>
+          <span className="text-gray-900 text-end">{result.concern}</span>
         </div>
         <div className="flex items-center justify-between py-2.5">
           <span>Treatment Duration</span>
@@ -47,7 +47,7 @@ export default function ResultsSection() {
       </h2>
 
       <div className="scrollbar-hide mt-8 flex gap-4 overflow-x-auto px-4 pb-4 md:grid md:grid-cols-4 md:overflow-visible md:pb-0">
-        {data.results.map((result) => (
+        {results.map((result) => (
           <ResultCard key={result.id} result={result} />
         ))}
       </div>

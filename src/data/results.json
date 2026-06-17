@@ -1,0 +1,22 @@
+[
+  {
+    "id": "gaps",
+    "concern": "Gaps",
+    "duration": "8 months"
+  },
+  {
+    "id": "crooked-teeth",
+    "concern": "Crooked Teeth",
+    "duration": "10 months"
+  },
+  {
+    "id": "open-bite",
+    "concern": "Open Bite",
+    "duration": "12 months"
+  },
+  {
+    "id": "protruding-teeth",
+    "concern": "Protruding Teeth",
+    "duration": "9 months"
+  }
+]

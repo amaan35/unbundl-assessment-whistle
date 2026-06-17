@@ -1,4 +1,4 @@
-import data from '../data/data.json'
+import smileSteps from '../data/smileSteps.json'
 import stepsImage from '../assets/perfect-smile-in-4-simple-steps.png'
 
 function PlayButton() {
@@ -82,18 +82,18 @@ export default function FourStepsSection() {
 
             <div className="mt-0 lg:mt-8">
               <div className="md:hidden">
-                {data.smileSteps.map((step, index) => (
+                {smileSteps.map((step, index) => (
                   <StepItem
                     key={step.id}
                     step={step}
-                    isLast={index === data.smileSteps.length - 1}
+                    isLast={index === smileSteps.length - 1}
                     layout="vertical"
                   />
                 ))}
               </div>
 
               <div className="hidden grid-cols-2 gap-x-8 gap-y-8 md:grid lg:mt-0">
-                {data.smileSteps.map((step) => (
+                {smileSteps.map((step) => (
                   <StepItem key={step.id} step={step} layout="grid" />
                 ))}
               </div>

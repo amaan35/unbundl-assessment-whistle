@@ -1,0 +1,26 @@
+[
+  {
+    "id": "scan",
+    "number": 1,
+    "title": "Scan",
+    "description": "We use an AI-powered scanner to take a detailed 3D image of your teeth."
+  },
+  {
+    "id": "plan",
+    "number": 2,
+    "title": "Plan",
+    "description": "Our Orthodontists design your customized smile enhancement plan using highly advanced software"
+  },
+  {
+    "id": "fabricate",
+    "number": 3,
+    "title": "Fabricate",
+    "description": "We manufacture your custom aligners leveraging 3D printing & laser technology"
+  },
+  {
+    "id": "wear",
+    "number": 4,
+    "title": "Wear",
+    "description": "Your Whistle Aligners and expert Clove Dental Orthodontists monitor your progress across the journey"
+  }
+]

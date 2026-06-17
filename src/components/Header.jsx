@@ -1,7 +1,7 @@
 import whistleLogo from '../assets/header-whistle-and-smile-logo.png'
-import data from '../data/data.json'
+import footer from '../data/footer.json'
 
-const phoneNumber = data.footer.contact.phone.replace(/-/g, '')
+const phoneNumber = footer.contact.phone.replace(/-/g, '')
 
 function PhoneRingIcon() {
   return (

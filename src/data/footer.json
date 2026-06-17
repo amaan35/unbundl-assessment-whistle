@@ -1,0 +1,23 @@
+{
+  "quickLinks": [
+    { "label": "Home", "href": "#" },
+    { "label": "Book a Free Scan", "href": "#" },
+    { "label": "How it Works", "href": "#" },
+    { "label": "Range of Aligners", "href": "#" },
+    { "label": "Aligners vs Braces", "href": "#" },
+    { "label": "FAQs", "href": "#" }
+  ],
+  "legalLinks": [
+    { "label": "Privacy Policy", "href": "#" },
+    { "label": "Terms of Service", "href": "#" }
+  ],
+  "contact": {
+    "phone": "011-6932-8350",
+    "email": "support@whistle.in"
+  },
+  "socialLinks": [
+    { "id": "instagram", "label": "Instagram", "href": "#" },
+    { "id": "facebook", "label": "Facebook", "href": "#" },
+    { "id": "x", "label": "X", "href": "#" }
+  ]
+}

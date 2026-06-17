@@ -1,4 +1,4 @@
-import data from '../data/data.json'
+import whistleDifference from '../data/whistleDifference.json'
 import whistleDiffImg from '../assets/the-whistle-diff.png'
 import nextGenIcon from '../assets/the-whistle-diff-next-gen.png'
 import hassleFreeIcon from '../assets/the-whistle-diff-hassle-free.png'
@@ -43,7 +43,7 @@ export default function WhistleDifferenceSection() {
           </h2>
 
           <div className="mt-2 md:mt-4">
-            {data.whistleDifference.map((feature) => (
+            {whistleDifference.map((feature) => (
               <FeatureItem key={feature.id} feature={feature} />
             ))}
           </div>

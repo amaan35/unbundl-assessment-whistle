@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import data from '../data/data.json'
+import faqs from '../data/faqs.json'
 
 function ToggleIcon({ expanded }) {
   return (
@@ -79,7 +79,7 @@ export default function FaqSection() {
         </h2>
 
         <div className="mt-8 border-t border-gray-200 md:mt-12">
-          {data.faqs.map((faq) => (
+          {faqs.map((faq) => (
             <FaqItem
               key={faq.id}
               faq={faq}

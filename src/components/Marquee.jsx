@@ -1,9 +1,9 @@
-import data from '../data/data.json'
+import marqueeItems from '../data/marquee.json'
 
 function MarqueeContent() {
   return (
     <>
-      {data.marqueeItems.map((item, index) => (
+      {marqueeItems.map((item, index) => (
         <span key={index} className="mx-8 inline-flex shrink-0 items-center gap-1">
           {item.text}
           {item.highlight && (
@@ -20,10 +20,10 @@ export default function Marquee() {
   return (
     <div className="overflow-hidden bg-gradient-to-r from-[#DCFCE7] to-[#E0F2FE] py-3">
       <div className="marquee-track flex whitespace-nowrap text-sm text-gray-800 md:text-base">
-        <div className="marquee-content flex">
+        <div className="flex">
           <MarqueeContent />
         </div>
-        <div className="marquee-content flex" aria-hidden="true">
+        <div className="flex" aria-hidden="true">
           <MarqueeContent />
         </div>
       </div>

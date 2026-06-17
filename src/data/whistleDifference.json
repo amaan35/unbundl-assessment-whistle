@@ -1,0 +1,20 @@
+[
+  {
+    "id": "next-gen",
+    "icon": "nextGen",
+    "title": "Next-Gen",
+    "description": "Crafted with top-notch 3D printing, laser tech, and Zendura FLX material."
+  },
+  {
+    "id": "hassle-free",
+    "icon": "hassleFree",
+    "title": "Hassle-Free",
+    "description": "Predictable, comfortable & lifestyle-friendly for an easy smile transformation."
+  },
+  {
+    "id": "transparent-pricing",
+    "icon": "transparentPricing",
+    "title": "Transparent Pricing",
+    "description": "Everything's included - from scans to aligners, doctor consults, and retainers - no hidden costs."
+  }
+]

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import data from '../data/data.json'
+import comparisonFeatures from '../data/comparisonFeatures.json'
 import whistleLogo from '../assets/header-whistle-and-smile-logo.png'
 
 function ChevronIcon({ expanded }) {
@@ -158,7 +158,7 @@ export default function ComparisonSection() {
           </div>
         </div>
 
-        {data.comparisonFeatures.map((feature) => (
+        {comparisonFeatures.map((feature) => (
           <ComparisonRow
             key={feature.id}
             feature={feature}
