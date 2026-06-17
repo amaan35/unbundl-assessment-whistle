@@ -246,9 +246,9 @@ export default function HeroSection() {
   return (
     <section>
       <div className="hero-gradient relative h-[40vh] overflow-hidden min-[1200px]:h-[45vh]">
-        <div className='flex flex-col space-y-5 px-[5%] max-md:pt-[10%] pt-[7%] min-[1000px]:px-[8%]'>
-          <h1 className="text-wrap font-bold text-2xl w-full min-[361px]:w-[65%] min-[540px]:text-3xl min-[820px]:w-[75%] min-[1000px]:text-[2rem] min-[1200px]:text-[2.5rem]">Invisible Aligners for a dream smile</h1>
-          <p className='w-[50%] text-wrap min-[540px]:text-xl min-[1000px]:text-2xl min-[1200px]:text-[1.5rem]'>Book a Scan and avail a free Orthodontist Consult {' '}
+        <div className="flex flex-col space-y-5 px-[5%] pt-[7%] max-md:pt-[10%] min-[1000px]:px-[8%] min-[1700px]:pl-[20%] min-[1700px]:pr-[8%] min-[1700px]:pt-[15%]">
+          <h1 className="text-wrap font-bold text-2xl w-full min-[361px]:w-[65%] min-[540px]:text-3xl min-[820px]:w-[75%] min-[1000px]:text-[2rem] min-[1200px]:text-[2.5rem] min-[1700px]:text-[3.5rem]">Invisible Aligners for a dream smile</h1>
+          <p className='w-[50%] text-wrap min-[540px]:text-xl min-[1000px]:text-2xl min-[1200px]:text-[1.5rem] min-[1700px]:text-[2rem]'>Book a Scan and avail a free Orthodontist Consult {' '}
             <span className='font-bold text-[#9361D7]'>worth ₹1500</span></p>
         </div>
         <img

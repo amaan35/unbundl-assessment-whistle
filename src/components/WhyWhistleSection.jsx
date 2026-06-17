@@ -1,21 +1,12 @@
 import data from '../data/data.json'
-import customMadeImg from '../assets/why-whistle-custom-made-invisible.png'
-import predictableResultsImg from '../assets/why-whistle-predictable-results.png'
-import partnershipImg from '../assets/why-whistle-partnership-clove-dental.png'
-import unlimitedAlignersImg from '../assets/why-whistle-unlimited-aligners.png'
-
-const imageMap = {
-  'why-whistle-custom-made-invisible.png': customMadeImg,
-  'why-whistle-predictable-results.png': predictableResultsImg,
-  'why-whistle-partnership-clove-dental.png': partnershipImg,
-  'why-whistle-unlimited-aligners.png': unlimitedAlignersImg,
-}
 
 function WhyCard({ card }) {
+  const imageUrl = `https://picsum.photos/seed/${card.id}/400/400`
+
   return (
     <article className="w-[240px] shrink-0 overflow-hidden rounded-2xl bg-[#F0F9FF] md:w-auto md:flex-1">
       <img
-        src={imageMap[card.image]}
+        src={imageUrl}
         alt={card.title}
         className="aspect-square max-md:aspect-[4/3] w-full rounded-t-2xl object-cover"
       />
